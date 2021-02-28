@@ -16,8 +16,10 @@ document.getElementById("wobSearchSubmit").addEventListener("click", function(ev
       }
       for (let i = 0; i < numberWobsShown; i ++){
         output += "<div class=\"wob\">"; 
+        output += "<div class=\"wobHeader\">";
         output += "<p class=\"eventName\">" + json.results[i].event_name + "</p>";
         output += "<p class=\"wobNumber\">" + json.results[i].id + "</p>";
+        output += "</div>";
         for (let j = 0; j < json.results[i].lines.length; j++){
           if (j > 5){
             output += "<p><em>(WoB truncated)</em></p>";
@@ -48,8 +50,10 @@ document.getElementById("wobDisplaySumbit").addEventListener("click", function(e
     }).then(function(json) {
       let output = "";
       output += "<div class=\"wob\">"; 
+      output += "<div class=\"wobHeader\">";
       output += "<p class=\"eventName\">" + json.event_name + "</p>";
       output += "<p class=\"wobNumber\">" + json.id + "</p>";
+      output += "</div>";
       for (let j = 0; j < json.lines.length; j++){
         if (j > 5){
           output += "<p><em>(WoB truncated)</em></p>";
@@ -73,8 +77,10 @@ document.getElementById("randomWob").addEventListener("click", function(event) {
     }).then(function(json) {
       let output = "";
       output += "<div class=\"wob\">"; 
+      output += "<div class=\"wobHeader\">";
       output += "<p class=\"eventName\">" + json.event_name + "</p>";
       output += "<p class=\"wobNumber\">" + json.id + "</p>";
+      output += "</div>";
       for (let j = 0; j < json.lines.length; j++){
         if (j > 5){
           output += "<p class=\"wobTruncation\"><em>(WoB truncated)</em></p>";

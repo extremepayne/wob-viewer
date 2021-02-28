@@ -14,21 +14,31 @@
 
 <body>
   <main role="main" class="container">
-    <form>
-      <label>Search for WoBs</label>
-      <input id="wobSearchInput" type="text"></input>
-      <input id="wobSearchSubmit" type="submit"></input>
-    </form>
-    <form>
-      <label>See a specific WoB</label>
-      <input id="wobDisplayInput" type="text"></input>
-      <input id="wobDisplaySumbit" type="submit"></input>
-    </form>
-    <button id="randomWob">Random WoB</button>
+    <div class="searchbars">
+      <form>
+        <label>Search for WoBs</label>
+        <input id="wobSearchInput" type="text"></input>
+        <input id="wobSearchSubmit" type="submit"></input>
+      </form>
+      <form>
+        <label>See a specific WoB</label>
+        <input id="wobDisplayInput" type="text"></input>
+        <input id="wobDisplaySumbit" type="submit"></input>
+      </form>
+    </div>
+    <div class="button-holder">
+      <button id="randomWob">Random WoB</button>
+    </div>
   
     <div id="wobOutput">
     </div>
   </main>
+
+  <footer class="footer">
+    <div class="container">
+      <a target="_blank" href="https://github.com/extremepayne/wob-viewer">Code for this website</a>
+    </div>
+  </footer>
 
   <script text="type/javascript" src="/script.js">
   <!-- Bootstrap scripts -->
